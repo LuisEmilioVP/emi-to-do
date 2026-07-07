@@ -1,13 +1,50 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>emi_to_do</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>DevTracker - Personal Task OS</title>
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body>
+		<canvas id="confetti-canvas"></canvas>
+
+		<header class="header">
+			<div class="header-inner">
+				<div class="header-title-group">
+					<div class="header-icon">⚡</div>
+					<div>
+						<h1 style="font-size: 1.2rem">DevTracker OS</h1>
+						<p style="font-size: 0.8rem; color: var(--text-secondary)">
+							Personal Task & Time Manager
+						</p>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<div class="creator-bar">
+			<input
+				type="text"
+				id="task-input"
+				placeholder="Nueva tarea (Ej: Configurar ECF DGII)..."
+				autocomplete="off"
+			/>
+			<input
+				type="text"
+				id="category-input"
+				placeholder="Categoría (Ej: Backend)..."
+				list="category-list"
+				autocomplete="off"
+				style="max-width: 200px"
+			/>
+			<datalist id="category-list"></datalist>
+			<button class="btn" id="add-btn">Agregar</button>
+		</div>
+
+		<main class="main" id="app-container"></main>
+
+		<script src="js/app.js"></script>
+	</body>
 </html>
